@@ -8,12 +8,15 @@
       <li><a href="#">About</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+      <li (click)="LogoutGoogle()"><a routerLink="/login" routerLinkActive="active"><span
+            class="glyphicon glyphicon-log-in"></span> Logout</a></li>
     </ul>
   </div>
 </nav>
 
-<div class="col-md-12" *ngIf="profiles && profiles?.status=='ok'">
+<router-outlet></router-outlet>
+
+<!-- <div class="col-md-12" *ngIf="profiles && profiles?.status=='ok'">
   <div *ngFor="let profile of profiles?.articles">
     <div class="col-md-3 dashboard">
       <span class="span-news"><a title="{{profile.title}}" target="_blank"
@@ -28,4 +31,4 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
